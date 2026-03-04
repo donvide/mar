@@ -5,6 +5,7 @@ import ConditionsPage from "./pages/ConditionsPage";
 import ContactPage from "./pages/ContactPage";
 import HomePage from "./pages/HomePage";
 import PolitiquePage from "./pages/PolitiquePage";
+import AdminPage from "./pages/AdminPage";
 import RemboursementPage from "./pages/RemboursementPage";
 import SuiviPage from "./pages/SuiviPage";
 
@@ -13,6 +14,7 @@ const ROUTES = {
   "/remboursement": RemboursementPage,
   "/suivi": SuiviPage,
   "/contact": ContactPage,
+  "/admin": AdminPage,
   "/politique-confidentialite": PolitiquePage,
   "/conditions": ConditionsPage,
 };
