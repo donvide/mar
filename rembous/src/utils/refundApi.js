@@ -10,7 +10,7 @@ async function parseJson(response) {
 }
 
 export async function createRefundRequest(payload) {
-  const response = await fetch("/.netlify/functions/create-refund", {
+  const response = await fetch("/api/create-refund", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
@@ -23,7 +23,7 @@ export async function createRefundRequest(payload) {
 
 export async function trackRefundByReference(reference) {
   const response = await fetch(
-    `/.netlify/functions/track-refund?reference=${encodeURIComponent(String(reference || "").trim())}`,
+    `/api/track-refund?reference=${encodeURIComponent(String(reference || "").trim())}`,
     {
       method: "GET",
     },
