@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { messages } from "../i18n/messages";
 
-const LANGUAGE_KEY = "rembous_language_v1";
+const LANGUAGE_KEY = "obtenirrembourssement_language_v1";
 const SUPPORTED_LANGUAGES = ["FR", "ES", "IT", "DE"];
 
 const LanguageContext = createContext(null);

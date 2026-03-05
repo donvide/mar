@@ -1,4 +1,4 @@
-const LAST_REF_KEY = "rembous_last_reference_v1";
+const LAST_REF_KEY = "obtenirrembourssement_last_reference_v1";
 
 async function parseJson(response) {
   const data = await response.json().catch(() => ({}));

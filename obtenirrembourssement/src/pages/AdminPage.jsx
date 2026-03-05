@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { WarningIcon } from "../components/Icons";
 
-const ADMIN_TOKEN_KEY = "rembous_admin_token_v1";
+const ADMIN_TOKEN_KEY = "obtenirrembourssement_admin_token_v1";
 const STATUS_OPTIONS = ["received", "review", "scheduled", "paid", "rejected"];
 
 async function parseJson(response) {

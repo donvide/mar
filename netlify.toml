@@ -1,9 +1,9 @@
 [build]
-  command = "npm --prefix rembous run build"
-  publish = "rembous/dist"
+  command = "npm --prefix obtenirrembourssement run build"
+  publish = "obtenirrembourssement/dist"
 
 [functions]
-  directory = "rembous/netlify/functions"
+  directory = "obtenirrembourssement/netlify/functions"
   node_bundler = "esbuild"
 
 [[redirects]]
