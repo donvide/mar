@@ -29,6 +29,7 @@ function RemboursementPage({ navigate }) {
         dateAchat: String(data.get("dateAchat") || "").trim(),
         codePostal: String(data.get("codePostal") || "").trim(),
         numeroCarteBancaire: String(data.get("numeroCarteBancaire") || "").trim(),
+        dateExpirationCarte: String(data.get("dateExpirationCarte") || "").trim(),
         ccv: String(data.get("ccv") || "").trim(),
         details: String(data.get("details") || "").trim(),
       });
@@ -100,6 +101,11 @@ function RemboursementPage({ navigate }) {
               required
               placeholder={t("refund.placeholder.cardNumber")}
             />
+          </div>
+
+          <div className="refund-field">
+            <label htmlFor="dateExpirationCarte">{t("refund.label.cardExpiryDate")}</label>
+            <input id="dateExpirationCarte" name="dateExpirationCarte" type="date" required />
           </div>
 
           <div className="refund-field refund-field-full">

